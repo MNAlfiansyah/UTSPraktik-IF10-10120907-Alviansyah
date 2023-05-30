@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/_20dp"
+    android:background="@color/grey_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bannerView"
+        android:layout_width="@dimen/_370dp"
+        android:layout_height="@dimen/_175dp"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/border"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/banner"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ppdb"
+        android:layout_width="@dimen/_368dp"
+        android:layout_height="@dimen/_175dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/border"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/bannerView">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pelaksanaan_ppdb_tahap_1_2023"
+            android:fontFamily="@font/robotobold"
+            android:textSize="@dimen/_15sp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/detail"
+            android:textAllCaps="false"
+            android:textColor="@color/darkgreen"
+            android:textSize="@dimen/_11sp"
+            android:paddingTop="@dimen/_0dp"
+            android:paddingLeft="@dimen/_0dp"
+            android:paddingRight="@dimen/_0dp"
+            android:paddingBottom="@dimen/_0dp"
+            app:cornerRadius="@dimen/_20dp"
+            app:icon="@drawable/vector"
+            app:iconGravity="textStart"
+            app:iconSize="@dimen/_12dp"
+            app:iconTint="@color/darkgreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginLeft="@dimen/_30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/ceklis" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_29dp"
+            android:background="@color/darkgreen"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toEndOf="@+id/line_1"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/circle_green" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="@dimen/_29dp"
+            android:layout_height="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_29dp"
+            android:background="@color/grey"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginLeft="@dimen/_14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/people_persiapan" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_18dp"
+            android:fontFamily="@font/robotobold"
+            android:text="@string/persiapan"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/_17_mei_05_juni_2023"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginRight="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/buku_persiapan" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pengumuman"
+        android:layout_width="@dimen/_368dp"
+        android:layout_height="@dimen/_230dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/border"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ppdb">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="@dimen/_36dp"
+            android:layout_height="@dimen/_36dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginLeft="@dimen/_12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/horn" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="@string/pengumuman_hasil_seleksi"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotobold"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100dp"
+            android:layout_marginRight="@dimen/_14dp"
+            android:layout_marginLeft="@dimen/_14dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/border_hijau"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginLeft="@dimen/_14dp"
+                android:text="@string/anda_dinyatakan_diterima_di"
+                android:textColor="@color/green_text"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginLeft="@dimen/_14dp"
+                android:text="@string/sma_negeri_1_bojonggede"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginLeft="@dimen/_14dp"
+                android:textSize="@dimen/_14sp"
+                android:text="@string/jalur_prestasi_kejuaraan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:layout_height="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_7dp"
+                android:layout_width="@dimen/_70dp"
+                android:backgroundTint="@color/darkgreen"
+                android:text="Detail"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sp"
+                android:paddingTop="@dimen/_0dp"
+                android:paddingLeft="@dimen/_0dp"
+                android:paddingRight="@dimen/_0dp"
+                android:paddingBottom="@dimen/_0dp"
+                app:cornerRadius="@dimen/_20dp"
+                app:icon="@drawable/vector"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/_12dp"
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layanan_ppdb"
+        android:layout_width="@dimen/_368dp"
+        android:layout_height="@dimen/_600dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/border"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/pengumuman">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/_36dp"
+            android:layout_height="@dimen/_36dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginLeft="@dimen/_12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hat" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="@string/layanan_ppdb"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotobold"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="@dimen/_12dp"
+            android:layout_height="@dimen/_12dp"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:srcCompat="@drawable/mark" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6dp"
+            android:layout_marginLeft="@dimen/_3dp"
+            android:text="@string/kota_bandung"
+            android:textColor="@color/green_text"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/academy" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/info_sekolah_ppdb"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginRight="@dimen/_25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/arrow_right" />
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_3"
+            app:srcCompat="@drawable/document" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/sosialisasi_ppdb"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginRight="@dimen/_25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_3"
+            app:srcCompat="@drawable/arrow_right" />
+
+        <View
+            android:id="@+id/line_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_4"
+            app:srcCompat="@drawable/notes" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/pendaftaran_ppdb_tahap_1"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toBottomOf="@+id/line_4" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginRight="@dimen/_25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_4"
+            app:srcCompat="@drawable/arrow_right" />
+
+        <View
+            android:id="@+id/line_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_5"
+            app:srcCompat="@drawable/horn_color" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/pengumumam_ppdb_tahap_1"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toBottomOf="@+id/line_5" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginRight="@dimen/_25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_5"
+            app:srcCompat="@drawable/arrow_right" />
+
+        <View
+            android:id="@+id/line_6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_6"
+            app:srcCompat="@drawable/phone" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/hotline"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView21"
+            app:layout_constraintTop_toBottomOf="@+id/line_6" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_35dp"
+            android:layout_marginRight="@dimen/_25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_6"
+            app:srcCompat="@drawable/arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/berita_terkait_ppdb"
+        android:layout_width="@dimen/_368dp"
+        android:layout_height="@dimen/_910dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/border"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/layanan_ppdb">
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="@dimen/_36dp"
+            android:layout_height="@dimen/_36dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginLeft="@dimen/_12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/horn" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="@string/berita_terkait_ppdb"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotobold"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginRight="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:lineHeight="@dimen/_20dp"
+            android:text="@string/dapatkan_semua_informasi_terbaru_dan_terpopuler_terkait_ppdb"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/slider_button"
+            android:layout_width="@dimen/_340dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/slider_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:layout_width="170dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text="@string/terbaru"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/green_text"
+                android:textSize="@dimen/_18dp"
+                android:textAllCaps="false"
+                app:icon="@drawable/circle_dot"
+                app:iconTint="@color/red"
+                app:iconSize="@dimen/_15dp"
+                app:iconGravity="textEnd"
+                app:cornerRadius="@dimen/_40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terpopuler"
+                android:layout_marginTop="@dimen/_25dp"
+                android:layout_marginLeft="@dimen/_30dp"
+                android:textSize="@dimen/_18dp"
+                app:layout_constraintStart_toEndOf="@+id/button3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/berita_ppdb_1"
+            android:layout_width="@dimen/_340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_button">
+
+            <ImageView
+                android:id="@+id/image_berita_1"
+                android:layout_width="@dimen/_80dp"
+                android:layout_height="@dimen/_80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ppdb_image" />
+
+            <TextView
+                android:id="@+id/judul_berita_1"
+                android:layout_width="@dimen/_220dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="@string/ppdb_sma_smk_2022_ridwan_kamil_ppdb_di_jawa_barat"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipe_berita_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:text="@string/pendidikan_15_jam_yang_lalu"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_1"
+                app:layout_constraintTop_toBottomOf="@+id/judul_berita_1" />
+
+            <ImageView
+                android:id="@+id/panah_berita_1"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow_right" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line_berita_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/berita_ppdb_1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/berita_ppdb_2"
+            android:layout_width="@dimen/_340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_berita_1">
+
+            <ImageView
+                android:id="@+id/image_berita_2"
+                android:layout_width="@dimen/_80dp"
+                android:layout_height="@dimen/_80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ppdb_image" />
+
+            <TextView
+                android:id="@+id/judul_berita_2"
+                android:layout_width="@dimen/_220dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="@string/persiapan_ppdb_jabar_tahun_2021_sudah_matang"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipe_berita_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:text="@string/pendidikan_4_juni_2022"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_2"
+                app:layout_constraintTop_toBottomOf="@+id/judul_berita_2" />
+
+            <ImageView
+                android:id="@+id/panah_berita_2"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow_right" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line_berita_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/berita_ppdb_2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/berita_ppdb_3"
+            android:layout_width="@dimen/_340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_berita_2">
+
+            <ImageView
+                android:id="@+id/image_berita_3"
+                android:layout_width="@dimen/_80dp"
+                android:layout_height="@dimen/_80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ppdb_image" />
+
+            <TextView
+                android:id="@+id/judul_berita_3"
+                android:layout_width="@dimen/_220dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="@string/pelaksana_teknis_ppdb_harus_evaluasi_diri"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipe_berita_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:text="@string/pendidikan_24_mei_2022"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_3"
+                app:layout_constraintTop_toBottomOf="@+id/judul_berita_3" />
+
+            <ImageView
+                android:id="@+id/panah_berita_3"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow_right" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line_berita_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/berita_ppdb_3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/berita_ppdb_4"
+            android:layout_width="@dimen/_340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_berita_3">
+
+            <ImageView
+                android:id="@+id/image_berita_4"
+                android:layout_width="@dimen/_80dp"
+                android:layout_height="@dimen/_80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ppdb_image" />
+
+            <TextView
+                android:id="@+id/judul_berita_4"
+                android:layout_width="@dimen/_220dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="@string/masih_ditemukan_blank_spot_dalam_proses_ppdb_kabupate"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipe_berita_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:text="@string/pendidikan_24_mei_2022"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_4"
+                app:layout_constraintTop_toBottomOf="@+id/judul_berita_4" />
+
+            <ImageView
+                android:id="@+id/panah_berita_4"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow_right" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line_berita_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/berita_ppdb_4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/berita_ppdb_5"
+            android:layout_width="@dimen/_340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_berita_4">
+
+            <ImageView
+                android:id="@+id/image_berita_5"
+                android:layout_width="@dimen/_80dp"
+                android:layout_height="@dimen/_80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ppdb_image" />
+
+            <TextView
+                android:id="@+id/judul_berita_5"
+                android:layout_width="@dimen/_220dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="@string/bupati_purwakarta_hadiri_pembukaan_masa_pengenalan"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipe_berita_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:text="@string/pendidikan_19_juli_2022"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toEndOf="@+id/image_berita_5"
+                app:layout_constraintTop_toBottomOf="@+id/judul_berita_5" />
+
+            <ImageView
+                android:id="@+id/panah_berita_5"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow_right" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line_berita_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/berita_ppdb_5" />
+
+        <TextView
+            android:id="@+id/lihat_semua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua_berita"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textColor="@color/green_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_berita_5" />
+
+        <ImageView
+            android:id="@+id/lihat_semua_arrow"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_berita_5"
+            app:srcCompat="@drawable/arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kembali_ke_atas"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12dp"
+        android:textColor="@color/green_text"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="@dimen/_15dp"
+        app:icon="@drawable/arrow_up"
+        app:iconSize="@dimen/_30dp"
+        app:iconTint="@color/green_text"
+        app:cornerRadius="@dimen/_48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/berita_terkait_ppdb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
